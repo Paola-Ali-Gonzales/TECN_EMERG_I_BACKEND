@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: 'http://spring-warehouse.s3-website-us-east-1.amazonaws.com'
+            allowedHeaders: '*'
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+
+  application:
+    name: gateway
+server:
+  port: 10480
+eureka:
+  client:
+    prefer-same-zone-eureka: true   
+    
